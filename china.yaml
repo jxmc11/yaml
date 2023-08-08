@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-08-07 09:34:41
+# 创建时间：2023-08-08 14:56:59
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：12
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,53 +21,123 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"🇨🇳_CN_中国_1","type":"vmess","server":"36.150.27.31","port":80,"cipher":"auto","uuid":"db8d12d5-1968-4125-b775-77d50aa65923","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇨🇳_CN_中国_2","type":"vmess","server":"101.42.30.206","port":80,"cipher":"auto","uuid":"24bc9855-8f7c-4543-e29d-970045f205f2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"🇨🇳_CN_中国->🇯🇵_JP_日本_1","type":"trojan","server":"j-p04.xingyunwu.top","port":50092,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇰🇷_KR_韩国_1","type":"trojan","server":"k-r04.xingyunwu.top","port":50026,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇹🇼_TW_台湾_1","type":"trojan","server":"t-wn02.xingyunwu.top","port":50054,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇯🇵_JP_日本_2","type":"trojan","server":"gonggao01.xingyunwu.top","port":50000,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇺🇸_US_美国","type":"trojan","server":"u-s01.xingyunwu.top","port":50028,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇹🇼_TW_台湾_2","type":"trojan","server":"t-wn01.xingyunwu.top","port":50052,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇹🇼_TW_台湾_3","type":"trojan","server":"t-wn03.xingyunwu.top","port":50056,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇯🇵_JP_日本_3","type":"trojan","server":"j-p01.xingyunwu.top","port":50044,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇯🇵_JP_日本_4","type":"trojan","server":"gonggao04.xingyunwu.top","port":50006,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇰🇷_KR_韩国_2","type":"trojan","server":"k-r01.xingyunwu.top","port":50020,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国->🇹🇼_TW_台湾_4","type":"trojan","server":"t-wn04.xingyunwu.top","port":50058,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国","type":"trojan","server":"u-s02.xingyunwu.top","port":50030,"udp":true,"password":"fad6dff0-9437-4ff1-ab9f-f96c48efc928","sni":"xingyunwu.top","skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,8 +160,18 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+      - 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
+      - 🇨🇳_CN_中国->🇹🇼_TW_台湾_4
+      - 🇨🇳_CN_中国
 
 rules:
 # 本地/局域网地址
