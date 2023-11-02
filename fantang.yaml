@@ -21,7 +21,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"fantang-vpn","type":"vmess","server":"43.135.40.31","port":10447,"cipher":"auto","uuid":"783261e9-f7b5-4129-8668-66a853af17f0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/awesomepath"}}
+  - {"name":"fantang-vpn","type":"vmess","server":"43.135.40.31","port":10448,"cipher":"auto","uuid":"783261e9-f7b5-4129-8668-66a853af17f0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/awesomepath"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
