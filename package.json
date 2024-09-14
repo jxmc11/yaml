@@ -5,7 +5,9 @@
     "form-data": "^2.3.3",
     "got": "^11.5.1",
     "http-server": "^0.12.3",
+    "js-yaml": "^4.1.0",
     "jsdom": "^18.0.0",
+    "jsonwebtoken": "^8.5.1",
     "node-cron": "^3.0.0",
     "node-fetch": "^2.6.6",
     "png-js": "^1.0.0",
@@ -13,7 +15,6 @@
     "request": "^2.88.2",
     "tough-cookie": "^4.0.0",
     "tunnel": "0.0.6",
-    "ws": "^7.4.3",
-    "jsonwebtoken": "^8.5.1"
+    "ws": "^7.4.3"
   }
 }
