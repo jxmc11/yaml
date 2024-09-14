@@ -227,8 +227,13 @@ function writeProxy(proxies, ruleProviders, rules) {
   const names = new Map();
   for (let index = 0; index < proxies.length; index++) {
     const element = proxies[index];
-    if (names.has(element.name)) {
-      element.name += ~~(Math.random() * 100);
+    const t = names.get(element.name)
+    if (t) {
+      if (t.server != element.server) {
+          element.name += ~~(Math.random() * 100);
+      } else {
+          continue
+      }
     }
     names.set(element.name, element);
   }
