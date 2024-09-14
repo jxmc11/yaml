@@ -2,6 +2,7 @@ const http = require('http')
 const fs = require('fs')
 const $ = new Env('ssr')
 const yaml = require('js-yaml')
+const { log } = require('console')
 
 function getUrl (db, code) {
   return new Promise(resolve => {
@@ -275,21 +276,24 @@ async function getcfmemFile() {
 }
 
 !(async () => {
+  console.time()
   await getcfmemFile();
+  console.timeEnd()
   console.log(1)
+  onsole.time()
   await getnodefreeFile();
+  console.timeEnd()
   console.log(2)
+  console.time()
   var clashMeta = getProxy("./clashMeta.yaml");
-  console.log(3)
   // var proxiesother = getProxy("./20240914-clash.yaml");
   var nodefree = getProxy("./nodefree.yaml");
-  console.log(4)
   //
   var options = getRule("./clashMeta.yaml")
-  console.log(5)
 
   writeProxy([...clashMeta, ...nodefree], options.ruleProviders, options.rules);
-  console.log(6)
+  console.log(3)
+  console.timeEnd()
   
 })().catch((e) => {
   $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
