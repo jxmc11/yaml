@@ -280,7 +280,7 @@ async function getcfmemFile() {
   await getcfmemFile();
   console.timeEnd()
   console.log(1)
-  onsole.time()
+  console.time()
   await getnodefreeFile();
   console.timeEnd()
   console.log(2)
