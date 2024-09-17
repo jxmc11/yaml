@@ -196,8 +196,10 @@ async function getssrUrl (url = 'https://nodefree.org/') {
       ...names.keys()
     );
     const str = yaml.dump(file);
+    
+    const temp = `# 创建时间：${(new Date()).toLocaleString()}` + "\n"
   
-    fs.writeFileSync("./total.yaml", str);
+    fs.writeFileSync("./total.yaml", temp + str);
   }
   
   
