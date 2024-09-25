@@ -163,6 +163,9 @@ async function getssrUrl (url = 'https://nodefree.org/') {
     const names = new Map();
     for (let index = 0; index < proxies.length; index++) {
       const element = proxies[index];
+      if (element.name.indexOf("CN") > 0) {
+        continue
+      }
       const t = names.get(element.name)
       if (t) {
         if (t.server != element.server) {
