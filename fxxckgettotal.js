@@ -216,8 +216,15 @@ async function getssrUrl (url = 'https://nodefree.org/') {
   }
   
  (async () => {
-    await getcfmemFile();
-    await getnodefreeFile();
+   try {
+      await getcfmemFile();
+   } catch(e){}
+   try {
+     await getnodefreeFile();
+   } catch(e) {
+
+   }
+    
 
     var clashMeta =getProxy("./clashMeta.yaml")
     
