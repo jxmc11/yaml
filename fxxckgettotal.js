@@ -230,7 +230,10 @@ async function getssrUrl (url = 'https://nodefree.org/') {
     
     var options = getRule("./clashMeta.yaml")
 
-    var nodefree = global.nodefree ? getProxy("./nodefree.yaml") : []
+    var nodefree = []
+    try {
+      nodefree = global.nodefree ? getProxy("./nodefree.yaml") : []
+    } catch(_) {}
 
     writeProxy([...clashMeta, ...nodefree], options.ruleProviders, options.rules);
  })()
