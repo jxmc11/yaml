@@ -1,0 +1,730 @@
+# 创建时间：12/21/2024, 4:07:24 PM
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9999
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇱🇻_LV_拉脱维亚
+    type: ss
+    server: 46.183.217.232
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vless
+    server: 151.101.66.219
+    port: 80
+    uuid: d6ef62e3-4a1a-57f5-b851-3151a124d85e
+    network: ws
+    ws-opts:
+      headers:
+        host: ELIV2-ELENA.COM
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 185.22.155.228
+    port: 23456
+    cipher: aes-256-gcm
+    password: dongtaiwang.com
+  - name: 🇨🇭_CH_瑞士
+    type: ss
+    server: 138.124.60.136
+    port: 44915
+    cipher: chacha20-ietf-poly1305
+    password: fMcrsQuZhCNiHBmXT80AhQ3mPK5alh/iLuDz4pILlYU=
+  - name: 🇷🇺_RU_俄罗斯_1
+    type: ss
+    server: 217.30.10.18
+    port: 9093
+    cipher: aes-256-cfb
+    password: wfLC2y7rzZyCmuyt
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 34.222.132.123
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇷🇺_RU_俄罗斯_2
+    type: ss
+    server: 217.30.10.18
+    port: 9088
+    cipher: aes-256-cfb
+    password: f8npKgNzdkss2ytn
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 199.232.196.204
+    port: 80
+    uuid: 913cdacd-2501-531a-8390-d2fcda924944
+    network: ws
+    ws-opts:
+      path: /Telegram,@ELiV2RAY-Telegram,@ELiV2RAY-Telegram,@ELiV2RAY-?ed=2560
+      headers:
+        host: JOiN--E-L-i-V-2-R-A-Y.net
+  - name: 🇷🇺_RU_俄罗斯_3
+    type: ss
+    server: 217.30.10.18
+    port: 9084
+    cipher: aes-256-cfb
+    password: c3NtHJ5ujV2tGDfj
+  - name: 🇩🇪_DE_德国
+    type: vmess
+    server: 185.189.58.195
+    port: 8080
+    uuid: 42e25353-b1ae-59f3-bd59-d86d2737b814
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国->🏳️_unKnow_未知
+    type: vless
+    server: 151.101.128.155
+    port: 80
+    uuid: 9ec9abe3-8b93-4829-b6ed-d40ceb7db1f5
+    network: ws
+    ws-opts:
+      path: >-
+        /@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs?ed=2056
+      headers:
+        host: joinbedeee-daily-configs.net
+  - name: 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+    type: ss
+    server: 85.133.241.75
+    port: 1935
+    cipher: chacha20-ietf-poly1305
+    password: 21586aab-3a37-4f55-b8b7-5ae69572d403
+  - name: 🇺🇸_US_美国_2
+    type: ss
+    server: 54.244.200.142
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇷🇺_RU_俄罗斯_4
+    type: ss
+    server: 217.30.10.18
+    port: 9056
+    cipher: aes-256-cfb
+    password: rNBfNuuANFCAk7KB
+  - name: 🇩🇪_DE_德国->🇺🇸_US_美国
+    type: ss
+    server: 45.87.175.154
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+  - name: 🇧🇬_BG_保加利亚
+    type: ss
+    server: 149.34.244.82
+    port: 443
+    cipher: aes-128-gcm
+    password: shadowsocks
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vless
+    server: 151.101.2.219
+    port: 80
+    uuid: d6ef62e3-4a1a-57f5-b851-3151a124d85e
+    network: ws
+    ws-opts:
+      headers:
+        host: ELIV2-ELENA.COM
+  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vless
+    server: 151.101.129.6
+    port: 80
+    uuid: 2657c719-a504-58fa-8a29-02476e27bb1b
+    network: ws
+    ws-opts:
+      headers:
+        host: PABLO-MOSTAFAA.COM
+  - name: 🇷🇺_RU_俄罗斯_5
+    type: ss
+    server: 217.30.10.18
+    port: 9005
+    cipher: aes-256-cfb
+    password: ZET59LF6DvCC8KVt
+  - name: 🇷🇺_RU_俄罗斯_6
+    type: ss
+    server: 217.30.10.18
+    port: 9006
+    cipher: aes-256-cfb
+    password: FAdUvMJUq5vDgKEq
+  - name: 🇷🇺_RU_俄罗斯_7
+    type: ss
+    server: 217.30.10.18
+    port: 9045
+    cipher: aes-256-cfb
+    password: Lp27rqyJq72bZsqX
+  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+    type: vless
+    server: 151.101.1.6
+    port: 80
+    uuid: 2657c719-a504-58fa-8a29-02476e27bb1b
+    network: ws
+    ws-opts:
+      headers:
+        host: PABLO-MOSTAFAA.COM
+  - name: 🇷🇺_RU_俄罗斯_8
+    type: ss
+    server: 217.30.10.18
+    port: 9026
+    cipher: aes-256-cfb
+    password: QWDDvVE9npNurQfA
+  - name: 🇷🇺_RU_俄罗斯_9
+    type: ss
+    server: 217.30.10.18
+    port: 9001
+    cipher: aes-256-cfb
+    password: UkXRsXvR6buDMG2Y
+  - name: 🇺🇸_US_美国->🇪🇸_ES_西班牙
+    type: vless
+    server: 151.101.130.219
+    port: 80
+    uuid: 8f6f8193-0f0b-5933-9346-718542befff9
+    network: ws
+    ws-opts:
+      headers:
+        host: ELiV2--ELENA.COM
+  - name: 🇺🇸_US_美国_3
+    type: ss
+    server: 54.70.176.73
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇷🇺_RU_俄罗斯_10
+    type: ss
+    server: 217.30.10.18
+    port: 9014
+    cipher: aes-256-cfb
+    password: KnJGad3FqTvjqbaX
+  - name: 🇷🇺_RU_俄罗斯_11
+    type: ss
+    server: 217.30.10.18
+    port: 9018
+    cipher: aes-256-cfb
+    password: fG2artUmHfNT2cX7
+  - name: 🇷🇺_RU_俄罗斯_12
+    type: ss
+    server: 217.30.10.18
+    port: 9019
+    cipher: aes-256-cfb
+    password: GA9KzeEgvfxNrgmM
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vless
+    server: 151.101.2.216
+    port: 80
+    uuid: 9ec9abe3-8b93-4829-b6ed-d40ceb7db1f5
+    network: ws
+    ws-opts:
+      path: >-
+        /@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs--@Daily_Configs?ed=2056
+      headers:
+        host: joinbedeee-daily-configs.net
+  - name: 🇷🇺_RU_俄罗斯_13
+    type: ss
+    server: 62.133.63.154
+    port: 20255
+    cipher: chacha20-ietf-poly1305
+    password: ebrYpJsRfFtlKuO2HygBoD
+  - name: 🇺🇸_US_美国_169
+    port: 443
+    server: 54.244.200.142
+    type: ss
+    udp: true
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_294
+    port: 8080
+    server: 79.110.53.169
+    type: ss
+    udp: true
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: 🇨🇦_CA_加拿大
+    port: 8090
+    server: 23.154.136.100
+    type: ss
+    udp: true
+    password: PCnnH6SQSnfoS27
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+    port: 443
+    server: 34.222.136.128
+    type: ss
+    udp: true
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇷🇺_RU_俄罗斯_864
+    port: 20255
+    server: 62.133.63.154
+    type: ss
+    udp: true
+    password: ebrYpJsRfFtlKuO2HygBoD
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国_315
+    port: 443
+    server: 54.201.174.149
+    type: ss
+    udp: true
+    password: amazonskr05
+    cipher: aes-256-cfb
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国->🇪🇸_ES_西班牙
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_11
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国_169
+      - 🇺🇸_US_美国_294
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇺_RU_俄罗斯_864
+      - 🇺🇸_US_美国_315
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./Clash/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./Clash/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaCompanyIp.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyMedia.list
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./Clash/LocalAreaNetwork.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./Clash/Microsoft.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/GoogleCN.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanProgramAD.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/SteamCN.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
