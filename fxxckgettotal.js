@@ -208,7 +208,7 @@ async function getssrUrl (url = 'https://nodefree.org/') {
   
   async function getcfmemFile() {
     const t1 = await getssrUrl("https://www.cfmem.com/")
-    const today = t1.match(/https:\/\/www.cfmem.com\/2024\/.+vpn\.html/)[0]
+    const today = t1.match(/https:\/\/www.cfmem.com\/2025\/.+vpn\.html/)[0]
     const t2 = await getssrUrl(today)
     const yaml = t2.match(/https:\/\/fs\.v2rayse\.com\/share\/.{4,20}\.yaml/g)
     await writeFile(yaml[0], 'clash')
