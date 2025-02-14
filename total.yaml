@@ -1,0 +1,831 @@
+# 创建时间：2/14/2025, 4:07:11 PM
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9999
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 34.220.100.94
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+    type: trojan
+    server: 104.26.15.85
+    port: 443
+    udp: true
+    sni: md1.safecdn.site
+    password: 936c6853-6bbf-4e24-8667-ec5b2fc275b3
+    network: ws
+    ws-opts:
+      path: >-
+        /Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2
+      headers:
+        host: md1.safecdn.site
+  - name: 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+    type: trojan
+    server: 104.26.14.85
+    port: 443
+    udp: true
+    sni: md1.safecdn.site
+    password: 936c6853-6bbf-4e24-8667-ec5b2fc275b3
+    network: ws
+    ws-opts:
+      path: >-
+        /Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2
+      headers:
+        host: md1.safecdn.site
+  - name: 🇺🇸_US_美国_1
+    type: ss
+    server: 38.114.123.245
+    port: 8118
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+  - name: 🇺🇦_UA_乌克兰
+    type: ss
+    server: 185.234.64.35
+    port: 8388
+    cipher: chacha20-ietf-poly1305
+    password: YTNjNDY5
+  - name: 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+    type: trojan
+    server: 52.89.149.132
+    port: 443
+    sni: grand-horse.adder289.quest
+    password: '3747000103274291200'
+  - name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+    type: ss
+    server: 185.231.233.173
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇲🇩_MD_摩尔多瓦
+    type: ss
+    server: 91.132.94.200
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+    type: ss
+    server: 149.34.244.72
+    port: 443
+    cipher: aes-128-gcm
+    password: shadowsocks
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 37.143.129.230
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇴_RO_罗马尼亚
+    type: ss
+    server: 185.193.49.88
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇦_UA_乌克兰_1
+    type: trojan
+    server: 85.90.194.160
+    port: 443
+    sni: awaited-chicken.adder289.quest
+    password: '3747000103274291200'
+    network: tcp
+  - name: 🇬🇧_GB_英国
+    type: vmess
+    server: 185.121.134.12
+    port: 20317
+    uuid: ed10802f-6cba-4ba8-932c-1d73a125c9d5
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: trojan
+    server: 172.67.73.163
+    port: 443
+    udp: true
+    sni: md1.safecdn.site
+    password: 936c6853-6bbf-4e24-8667-ec5b2fc275b3
+    network: ws
+    ws-opts:
+      path: >-
+        /Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2
+      headers:
+        host: md1.safecdn.site
+  - name: 🇬🇧_GB_英国_1
+    type: trojan
+    server: 18.135.122.249
+    port: 22222
+    network: tcp
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇺🇸_US_美国_160
+    type: ss
+    server: 47.129.223.160
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_2
+    type: ss
+    server: 54.212.56.86
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vmess
+    server: 151.101.0.155
+    port: 80
+    uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70
+    network: ws
+    ws-opts:
+      path: /racevpn
+      headers:
+        host: telegram-isvvpn.ir
+    ip-version: dual
+    udp: true
+    alterId: 0
+    cipher: auto
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 134.255.210.49
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_3
+    type: ss
+    server: 35.94.43.251
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_4
+    type: ss
+    server: 185.47.253.171
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+    type: ss
+    server: 54.188.92.179
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇩🇪_DE_德国->🇺🇸_US_美国
+    type: trojan
+    server: 3.126.41.247
+    port: 22222
+    network: tcp
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 35.91.180.231
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vmess
+    server: join.ISVvpn.fastly80-3.hosting-ip.com
+    port: 80
+    uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70
+    network: ws
+    ws-opts:
+      path: /racevpn
+      headers:
+        host: telegram-isvvpn.ir
+    ip-version: dual
+    udp: true
+    alterId: 0
+    cipher: auto
+  - name: 🇷🇺_RU_俄罗斯
+    type: vmess
+    server: 185.22.153.73
+    port: 17479
+    uuid: af7f07dc-d726-4b1e-967d-dbb6c594999f
+    network: ws
+    ws-opts:
+      path: github.com/Alvin9999
+    ip-version: dual
+    udp: true
+    alterId: 0
+    cipher: auto
+  - name: 🇬🇧_GB_英国_2
+    type: trojan
+    server: 18.133.167.84
+    port: 22222
+    network: tcp
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇺🇸_US_美国_6
+    type: trojan
+    server: 13.50.25.213
+    port: 22222
+    network: tcp
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇧🇪_BE_比利时
+    type: ss
+    server: 192.71.249.146
+    port: 990
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 18.171.21.26
+    port: 22222
+    network: tcp
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇺🇸_US_美国_8
+    type: ss
+    server: 35.91.120.138
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 34.221.167.203
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇱🇹_LT_立陶宛
+    type: ss
+    server: 147.78.1.27
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_10
+    type: ss
+    server: 34.217.211.139
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_11
+    type: ss
+    server: 52.11.187.58
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇦_UA_乌克兰66
+    type: ss
+    server: 176.103.53.105
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_12
+    type: vmess
+    server: 142.4.104.33
+    port: 52143
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    network: tcp
+    ip-version: dual
+    udp: true
+    alterId: 64
+    cipher: auto
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: trojan
+    server: 13.61.202.11
+    port: 22222
+    network: tcp
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.uk
+    alpn:
+      - http/1.1
+    ip-version: dual
+    udp: true
+  - name: 🇪🇸_ES_西班牙
+    type: ss
+    server: 150.241.97.212
+    port: 1601
+    password: yhDWDX3XM7yLFr1YWB7QOe
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_1
+      - 🇺🇸_US_美国_1
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦_2
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇮🇹_IT_意大利
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇦_UA_乌克兰_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_160
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇷🇺_RU_俄罗斯
+      - 🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_6
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_11
+      - 🇺🇦_UA_乌克兰66
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇪🇸_ES_西班牙
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./Clash/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./Clash/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaCompanyIp.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyMedia.list
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./Clash/LocalAreaNetwork.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./Clash/Microsoft.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/GoogleCN.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanProgramAD.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/SteamCN.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
