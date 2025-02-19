@@ -1,0 +1,656 @@
+# 创建时间：2/19/2025, 4:07:13 PM
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9999
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇩🇪_DE_德国
+    type: trojan
+    server: 52.57.173.145
+    port: 443
+    sni: patient-ghost.treefrog761.one
+    password: '3782591447421952000'
+    skip-cert-verify: true
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 37.143.129.230
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇰🇷_KR_韩国
+    type: ss
+    server: 154.223.16.212
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 217.30.10.18
+    port: 9010
+    cipher: aes-256-cfb
+    password: f63gg8EruDnUrmz4
+  - name: 🇺🇸_US_美国
+    type: vless
+    server: 151.101.66.219
+    port: 80
+    uuid: 57d32360-1f28-48a6-9067-8086f7138891
+    network: ws
+    ws-opts:
+      path: /olem/ws?ed=1024
+      headers:
+        host: foffmelo.com
+  - name: 🇮🇳_IN_印度
+    type: ss
+    server: 103.104.247.47
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 104.17.147.22
+    port: 2052
+    uuid: bd58bea4-c47e-5312-ab74-da275166c87e
+    network: ws
+    ws-opts:
+      path: >-
+        /vless#@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL
+      headers:
+        host: sPeedtest2.sbs.lt2.vless.sitespeedtest.net
+  - name: 🇷🇺_RU_俄罗斯_1
+    type: ss
+    server: 185.231.233.173
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇮🇷_IR_伊朗
+    type: trojan
+    server: 188.253.22.10
+    port: 443
+    sni: key-pangolin.treefrog761.one
+    password: '3778399737045327872'
+    network: tcp
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国_16
+    type: ss
+    server: 54.218.121.242
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_2
+    type: ss
+    server: 38.91.107.72
+    port: 5500
+    password: KixLvKzwjekG00rm
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_3
+    type: ss
+    server: 23.185.248.17
+    port: 17007
+    password: 0U17L4LTFDK38Y1J
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_4
+    type: ss
+    server: 34.221.167.203
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇫🇷_FR_法国_1
+    type: ss
+    server: 146.19.106.5
+    port: 8388
+    password: MzZjN
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇦_UA_乌克兰_1
+    type: ss
+    server: 185.234.64.35
+    port: 8388
+    password: YTNjNDY5
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+    type: ss
+    server: 34.221.182.25
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+    type: ss
+    server: 194.5.215.59
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    ip-version: dual
+    udp: true
+    cipher: rc4-md5
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 54.212.222.229
+    port: 443
+    password: amazonskr05
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇩🇪_DE_德国_1
+    type: ss
+    server: 134.255.210.49
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇷🇴_RO_罗马尼亚
+    type: ss
+    server: 188.214.36.155
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_6
+    type: ss
+    server: 23.185.248.18
+    port: 17008
+    password: DA30RDLW91YDLDN2
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_7
+    type: ss
+    server: 185.47.252.251
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇩🇪_DE_德国_2
+    type: ss
+    server: 193.108.119.63
+    port: 7002
+    password: RexnBgU7EV5ADxG
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_8
+    type: ss
+    server: 185.237.185.160
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 23.185.248.16
+    port: 17006
+    password: B0UPGL2IUSB0UV4B
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_10
+    type: ss
+    server: 38.91.107.43
+    port: 7307
+    password: FoOiGlkAA9yPEGP
+    ip-version: dual
+    udp: true
+    cipher: aes-256-gcm
+  - name: 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+    type: ss
+    server: 45.87.175.154
+    port: 8080
+    password: 4a2rfixophdjffa8KVA4Aa
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+  - name: 🇷🇺_RU_俄罗斯15
+    type: ss
+    server: 185.231.233.173
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+  - name: 🇫🇷_FR_法国_2
+    type: ss
+    server: ca1.ssocks.wiki
+    port: 8388
+    password: MzZjN
+    ip-version: dual
+    udp: true
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇦_UA_乌克兰_2
+    type: ss
+    server: 176.103.53.105
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    ip-version: dual
+    udp: true
+    cipher: aes-256-cfb
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇩🇪_DE_德国
+      - 🇮🇹_IT_意大利
+      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇫🇷_FR_法国_1
+      - 🇺🇦_UA_乌克兰_1
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇷🇴_RO_罗马尼亚->🇭🇺_HU_匈牙利
+      - 🇺🇸_US_美国_5
+      - 🇩🇪_DE_德国_1
+      - 🇷🇴_RO_罗马尼亚
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_7
+      - 🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_10
+      - 🇩🇪_DE_德国->🇦🇷_AR_阿根廷
+      - 🇷🇺_RU_俄罗斯15
+      - 🇫🇷_FR_法国_2
+      - 🇺🇦_UA_乌克兰_2
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./Clash/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./Clash/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaCompanyIp.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyMedia.list
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./Clash/LocalAreaNetwork.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./Clash/Microsoft.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/GoogleCN.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanProgramAD.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/SteamCN.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
