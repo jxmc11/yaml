@@ -1,0 +1,762 @@
+# 创建者：v2rayse.com 自动创建
+# 创建时间：2025-03-15 08:00:00
+# 节点类型：vless
+---
+mixed-port: 7890
+allow-lan: false
+mode: "rule"
+log-level: "info"
+external-controller: "127.0.0.1:9999"
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  default-nameserver:
+  - "223.5.5.5"
+  - "114.114.114.114"
+  nameserver:
+  - "223.5.5.5"
+  - "114.114.114.114"
+  - "119.29.29.29"
+  - "180.76.76.76"
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - "router.asus.com"
+  - "localhost.sec.qq.com"
+  - "localhost.ptlogin2.qq.com"
+  - "+.msftconnecttest.com"
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - "114.114.114.114"
+  - "180.76.76.76"
+  - "119.29.29.29"
+  - "223.5.5.5"
+  - "8.8.8.8"
+  - "8.8.4.4"
+  - "1.1.1.1"
+  - "1.0.0.1"
+proxies:
+- name: "🇩🇪_DE_德国"
+  type: "vless"
+  server: "5.161.144.111"
+  port: 443
+  uuid: "95701d09-280b-478f-9812-ae2947cc1b1e"
+  network: "tcp"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国"
+  type: "vless"
+  server: "151.101.123.9"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国"
+  type: "vless"
+  server: "151.101.123.154"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_1"
+  type: "vless"
+  server: "151.101.123.246"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_2"
+  type: "vless"
+  server: "151.101.123.70"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  type: "vless"
+  server: "151.101.123.244"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  type: "vless"
+  server: "151.101.123.234"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_3"
+  type: "vless"
+  server: "151.101.123.180"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_4"
+  type: "vless"
+  server: "151.101.123.69"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_5"
+  type: "vless"
+  server: "151.101.123.255"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  type: "vless"
+  server: "151.101.123.177"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_6"
+  type: "vless"
+  server: "151.101.123.53"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_7"
+  type: "vless"
+  server: "151.101.123.36"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  type: "vless"
+  server: "151.101.123.199"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_8"
+  type: "vless"
+  server: "151.101.123.35"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  type: "vless"
+  server: "151.101.123.212"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_9"
+  type: "vless"
+  server: "151.101.123.216"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_10"
+  type: "vless"
+  server: "151.101.123.227"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_11"
+  type: "vless"
+  server: "151.101.123.119"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_12"
+  type: "vless"
+  server: "151.101.123.88"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  type: "vless"
+  server: "151.101.123.38"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_13"
+  type: "vless"
+  server: "151.101.123.74"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_14"
+  type: "vless"
+  server: "151.101.123.6"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_15"
+  type: "vless"
+  server: "151.101.123.46"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  type: "vless"
+  server: "151.101.123.54"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_16"
+  type: "vless"
+  server: "151.101.123.93"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  type: "vless"
+  server: "151.101.123.45"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  type: "vless"
+  server: "151.101.123.231"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_17"
+  type: "vless"
+  server: "151.101.123.39"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_18"
+  type: "vless"
+  server: "151.101.123.205"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_19"
+  type: "vless"
+  server: "151.101.123.97"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_20"
+  type: "vless"
+  server: "151.101.123.128"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+- name: "🇫🇷_FR_法国_21"
+  type: "vless"
+  server: "151.101.123.24"
+  port: 80
+  uuid: "568279ce-dd78-4f33-9e5c-64b18c5505db"
+  network: "ws"
+  ws-opts:
+    path: "/olem/ws?ed=2560"
+    headers:
+      host: "foffmelo.com"
+proxy-groups:
+- name: "🚀 节点选择"
+  type: "select"
+  proxies:
+  - "♻️ 自动选择"
+  - "DIRECT"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "♻️ 自动选择"
+  type: "url-test"
+  url: "http://www.gstatic.com/generate_204"
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "🌍 国外媒体"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+  - "🎯 全球直连"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "📲 电报信息"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "Ⓜ️ 微软服务"
+  type: "select"
+  proxies:
+  - "🎯 全球直连"
+  - "🚀 节点选择"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "🍎 苹果服务"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+- name: "🎯 全球直连"
+  type: "select"
+  proxies:
+  - "DIRECT"
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+- name: "🛑 全球拦截"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🍃 应用净化"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🐟 漏网之鱼"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "♻️ 自动选择"
+  - "🇩🇪_DE_德国"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国"
+  - "🇫🇷_FR_法国"
+  - "🇫🇷_FR_法国_1"
+  - "🇫🇷_FR_法国_2"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_1"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_2"
+  - "🇫🇷_FR_法国_3"
+  - "🇫🇷_FR_法国_4"
+  - "🇫🇷_FR_法国_5"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_3"
+  - "🇫🇷_FR_法国_6"
+  - "🇫🇷_FR_法国_7"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_4"
+  - "🇫🇷_FR_法国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_5"
+  - "🇫🇷_FR_法国_9"
+  - "🇫🇷_FR_法国_10"
+  - "🇫🇷_FR_法国_11"
+  - "🇫🇷_FR_法国_12"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_6"
+  - "🇫🇷_FR_法国_13"
+  - "🇫🇷_FR_法国_14"
+  - "🇫🇷_FR_法国_15"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_7"
+  - "🇫🇷_FR_法国_16"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_8"
+  - "🇫🇷_FR_法国->🇺🇸_US_美国_9"
+  - "🇫🇷_FR_法国_17"
+  - "🇫🇷_FR_法国_18"
+  - "🇫🇷_FR_法国_19"
+  - "🇫🇷_FR_法国_20"
+  - "🇫🇷_FR_法国_21"
+rule-providers:
+  Apple:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Apple.list"
+  Telegram:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Telegram.list"
+  ProxyLite:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyLite.list"
+  ChinaDomain:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaDomain.list"
+  ChinaCompanyIp:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaCompanyIp.list"
+  ProxyMedia:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyMedia.list"
+  LocalAreaNetwork:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/LocalAreaNetwork.list"
+  Microsoft:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Microsoft.list"
+  GoogleCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/GoogleCN.list"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanAD.list"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanProgramAD.list"
+  SteamCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/SteamCN.list"
+rules:
+- "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+- "RULE-SET,BanAD,🛑 全球拦截"
+- "RULE-SET,BanProgramAD,🍃 应用净化"
+- "RULE-SET,GoogleCN,🎯 全球直连"
+- "RULE-SET,SteamCN,🎯 全球直连"
+- "RULE-SET,Microsoft,Ⓜ️ 微软服务"
+- "RULE-SET,Apple,🍎 苹果服务"
+- "RULE-SET,ProxyMedia,🌍 国外媒体"
+- "RULE-SET,Telegram,📲 电报信息"
+- "RULE-SET,ProxyLite,🚀 节点选择"
+- "RULE-SET,ChinaDomain,🎯 全球直连"
+- "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+- "GEOIP,CN,🎯 全球直连"
+- "MATCH,🐟 漏网之鱼"
