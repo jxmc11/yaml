@@ -1,0 +1,464 @@
+# 创建时间：5/24/2025, 8:07:15 PM
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9999
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇬🇧_GB_英国->🇯🇵_JP_日本
+    type: ss
+    server: 185.186.77.137
+    port: 20025
+    cipher: aes-256-gcm
+    password: 3CDEOKQIIAXIW94F
+  - name: 🇺🇸_US_美国
+    type: vmess
+    server: xxccvfrty.999836.xyz
+    port: 80
+    uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /10W6SJaK0F0oVXeNU6S2RVRP
+      headers:
+        host: xxccvfrty.999836.xyz
+    alterId: 0
+  - name: 🇩🇰_DK_丹麦
+    type: ss
+    server: 185.186.79.135
+    port: 20028
+    cipher: aes-256-gcm
+    password: KC41MMYVAX83GDJ0
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 172.67.73.163
+    port: 8080
+    uuid: 690ab90e-3f21-422b-8cb1-bc9845c7af1e
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: IO.IhJtq0hklC.ZULAiR.OrG.
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 45.87.175.188
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+  - name: 🇮🇳_IN_印度
+    type: ss
+    server: 134.209.147.198
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 172.67.181.193
+    port: 443
+    udp: true
+    sni: EEeEee4.hUAngSHANG2030.dPdNS.org
+    password: c8eac4b7-95ba-4ce0-920d-c3279eb3b391
+    network: ws
+    ws-opts:
+      path: /ptGwaGzcA4KNAXX
+      headers:
+        host: EEeEee4.hUAngSHANG2030.dPdNS.org
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 104.26.14.85
+    port: 8080
+    uuid: 690ab90e-3f21-422b-8cb1-bc9845c7af1e
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: IO.IhJtq0hklC.ZULAiR.OrG.
+  - name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 104.21.22.211
+    port: 443
+    udp: true
+    sni: T.taipEi108.Dpdns.Org
+    password: 061ec9d5-ba40-428a-8be0-1947b10b5cfc
+    network: ws
+    ws-opts:
+      path: /Dmby2AKiZKvMo1YauoQwY5
+  - name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+    type: vmess
+    server: 43.153.74.63
+    port: 39254
+    uuid: 6628b585-0626-49f5-daa4-57e10167c58d
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国_5
+    type: trojan
+    server: 172.67.207.27
+    port: 443
+    udp: true
+    sni: T.taipEi108.Dpdns.Org
+    password: 061ec9d5-ba40-428a-8be0-1947b10b5cfc
+    network: ws
+    ws-opts:
+      path: /Dmby2AKiZKvMo1YauoQwY5
+  - name: 🇧🇷_BR_巴西
+    type: ss
+    server: 185.192.124.41
+    port: 20013
+    cipher: aes-256-gcm
+    password: O55I5S3036MIUJ8E
+  - name: 🇳🇱_NL_荷兰->🇺🇸_US_美国
+    type: vmess
+    server: 45.147.201.231
+    port: 22056
+    uuid: 3b461cfb-c8ad-49aa-9fe9-bbe437a4d580
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+    alterId: 0
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 185.231.233.112
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇸🇪_SE_瑞典->🇺🇸_US_美国
+    type: vmess
+    server: 185.146.173.25
+    port: 80
+    uuid: 27ee8047-5da9-4433-8c85-45f5feb1967f
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+      headers:
+        host: google.whatsapp.snapp.torob.basalam.sarzamiiinahang.ir.
+    alterId: 0
+  - name: 🇺🇸_US_美国_6
+    type: trojan
+    server: 104.21.46.90
+    port: 443
+    udp: true
+    sni: DddVfGty.frEeVpnAtM.dpdNS.oRG
+    password: ac5b2e52-435b-4461-a99c-1317ab0e2889
+    network: ws
+    ws-opts:
+      path: /HmfeUdLKf899DmZDo0oju2st1
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇬🇧_GB_英国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_5
+      - 🇧🇷_BR_巴西
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇸🇪_SE_瑞典->🇺🇸_US_美国
+      - 🇺🇸_US_美国_6
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./Clash/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./Clash/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaCompanyIp.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyMedia.list
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./Clash/LocalAreaNetwork.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./Clash/Microsoft.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/GoogleCN.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanProgramAD.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/SteamCN.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
