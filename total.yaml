@@ -1,0 +1,337 @@
+# 创建时间：8/25/2025, 8:07:16 PM
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9999
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇺🇸_US_美国
+    type: vless
+    server: 172.66.40.99
+    port: 80
+    uuid: e7a615ad-4fd4-4ffd-9755-662d51015d3d
+    network: ws
+    ws-opts:
+      path: >-
+        /@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420----@EXPRESSVPN_420
+      headers:
+        host: s6.inFo.laLezaRanegomaNandish.suB420-mohaMad.online.
+  - name: 🇮🇷_IR_伊朗
+    type: vless
+    server: 91.98.21.125
+    port: 80
+    uuid: Free_HTTPCustom
+    network: tcp
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: vmess
+    server: www.speedtest.net
+    port: 80
+    sni: ''
+    uuid: 3d76ac40-80c4-11f0-b432-205c6d5f5d78
+    cipher: auto
+    network: ws
+    fingerprint: ''
+    ws-opts:
+      path: /b87r3d9e
+      headers:
+        host: zula.ir.eu-2.hihu.net
+    alterId: 0
+  - name: 🇮🇷_IR_伊朗_1
+    type: vless
+    server: backup.youracccenter.xyz
+    port: 443
+    uuid: 521bf305-6f4c-437a-b183-8fec52696749
+    network: >-
+      tcp¬e=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---
+  - name: 🇮🇷_IR_伊朗->🇺🇸_US_美国
+    type: vless
+    server: zarin8i.alireza031.pw
+    port: 26734
+    uuid: c9032a96-614a-4e8c-bc01-c96aa2ef749c
+    network: ws
+    ws-opts:
+      path: /
+  - name: 🇸🇪_SE_瑞典
+    type: ss
+    server: 192.71.166.100
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯
+    type: trojan
+    server: 193.124.46.134
+    port: 8441
+    sni: >-
+      zula.ir.AstroVPN-official.AstroVPN-official.workers.dev.AstroVPN_Official.org.AstroVPN.com.AstroVPN_Official.xyz.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.monster.AstroVPN_OfficialJoinTelegram-------------AstroVPN_Official----------Join.ir
+    password: tunnel-astrovpn_official-29
+    network: tcp
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+  - name: 🇷🇺_RU_俄罗斯_1
+    type: ss
+    server: 185.231.233.112
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸_US_美国
+      - 🇮🇷_IR_伊朗
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇮🇷_IR_伊朗_1
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇸🇪_SE_瑞典
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_1
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./Clash/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./Clash/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./Clash/ChinaCompanyIp.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./Clash/ProxyMedia.list
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./Clash/LocalAreaNetwork.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./Clash/Microsoft.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/GoogleCN.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./Clash/BanProgramAD.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./Clash/SteamCN.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
